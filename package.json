@@ -7,8 +7,5 @@
   "license": "MIT",
   "dependencies": {
     "@zeitgeistpm/sdk": "^0.3.10"
-  },
-  "_moduleAliases": {
-    "zeitgeist-sdk": "/opt/src/zeitgeistpm/tools/packages/sdk"
- }
+  }
 }
