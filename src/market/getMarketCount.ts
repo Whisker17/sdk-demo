@@ -1,4 +1,4 @@
-import SDK from "./../../../zeitgeistpm/tools/packages/sdk/dist";
+import SDK from "../../../../zeitgeistpm/tools/packages/sdk/dist";
 
 async function main() {
   // Initialise the provider to connect to the local node

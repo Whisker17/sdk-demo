@@ -21,7 +21,7 @@ async function main() {
   var opts: Options = {
       endpoint: ZTGNET,
       graphQlEndpoint: "https://processor.zeitgeist.pm/graphql",
-      statuses: ["Resolved"],
+      statuses: ["Active"],
       orderBy: "newest",
       ordering: "desc",
       pageSize: 10,
