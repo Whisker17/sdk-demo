@@ -1,4 +1,4 @@
-import SDK from "./../../../zeitgeistpm/tools/packages/sdk/dist";
+import SDK from "../../../../zeitgeistpm/tools/packages/sdk/dist";
 import types from "@zeitgeistpm/sdk/dist/types";
 
 async function main() {
