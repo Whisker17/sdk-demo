@@ -1,25 +1,31 @@
 # Common
 
-- **getAllMarketIds**
+### getBlockInfo
 
-- **getAllMarkets**
+You can use this function to get all market IDs in the Zeitgeiest.
 
-- **createCategoricalMarket**
+```typescript
+const api = await ApiPromise.create({ provider });
 
-- **createScalarMarket**
+const [blockNumber] = await Promise.all([
+    api.rpc.chain.getHeader(),
+  ]);
+```
+[Code snippet](./getBlockInfo.ts)
 
-- **fetchMarketData**
 
-- **getMarketCount**
+### getChainInfo
 
-- **fetchDisputes**
+You can use this function to get all market IDs in the Zeitgeiest.
 
-- **fetchPoolData**
+```typescript
+const api = await ApiPromise.create({ provider });
 
-- **assetSpotPricesInZtg**
+const [chain, nodeName, nodeVersion] = await Promise.all([
+    api.rpc.system.chain(),
+    api.rpc.system.name(),
+    api.rpc.system.version(),
+  ]);
+```
+[Code snippet](./getChainInfo.ts)
 
-- **getBlockData**
-
-- **indexTransferRecipients**
-
-- **currencyTransfer**
