@@ -31,10 +31,19 @@ You can use this function to get all market IDs in the Zeitgeiest.
 ```typescript
 const sdk = await SDK.initialize(endpoint);
 
-const res = await sdk.models.getAllMarketIds();
+const marketId = await sdk.models.createCategoricalMarket(
+    signer,
+    oracle,
+    marketPeriod,
+    advised,
+    mdm,
+    cpmm,
+    metadata,
+    false
+  );
 ```
 
-[Code snippet](./getAllMarketIds.ts)
+[Code snippet](./createCategoricalMarket.ts)
 
 ### createScalarMarket
 
@@ -46,7 +55,7 @@ const sdk = await SDK.initialize(endpoint);
 const res = await sdk.models.getAllMarketIds();
 ```
 
-[Code snippet](./getAllMarketIds.ts)
+[Code snippet](./createScalarMarket.ts)
 
 ### fetchMarketData
 
