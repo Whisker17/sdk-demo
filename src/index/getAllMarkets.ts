@@ -10,7 +10,8 @@ async function main() {
   const marketId: number = 1;
 
   const res = await sdk.models.getAllMarkets();
-  console.log(res);
+  
+  res.forEach((market) => console.log(market.toJSONString()));
 }
 
 main()

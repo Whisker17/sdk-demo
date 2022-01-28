@@ -1,25 +1,25 @@
 # Market
 
-- **toJSONString**
+### toJSONString
 
-- **getSpotPrice**
+### getSpotPrice
 
-- **assetSpotPricesInZtg**
+### assetSpotPricesInZtg
 
-- **fetchPoolSpotPrices**
+### fetchPoolSpotPrices
 
-- **sharesId**
+### sharesId
 
-- **accountId**
+### accountId
 
-- **joinPool**
+### joinPool
 
-- **poolJoinWithExactAssetAmount**
+### poolJoinWithExactAssetAmount
 
-- **joinPoolMultifunc**
+### joinPoolMultifunc
 
-- **exitPool**
+### exitPool
 
-- **swapExactAmountIn**
+### swapExactAmountIn
 
-- **swapExactAmountOut**
+### swapExactAmountOut

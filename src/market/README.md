@@ -1,35 +1,246 @@
 # Market
 
-- **toJSONString**
+### toJSONString
 
-- **toFilteredJSONString**
+You can use this function to converts market object into string.
 
-- **filterMarketData**
+```typescript
+const sdk = await SDK.initialize(endpoint);
 
-- **getEndTimestamp**
+const res = await sdk.models.getAllMarkets();
 
-- **getPoolId**
+res.forEach((market) => console.log(market.toJSONString()));
+```
 
-- **getPool**
+### toFilteredJSONString
 
-- **getDisputes**
+You can use this function to converts market object into string with filters.
 
-- **deploySwapPool**
+```typescript
+const sdk = await SDK.initialize(endpoint);
 
-- **assetSpotPricesInZtg**
+const res = await sdk.models.getAllMarkets();
 
-- **buyCompleteSet**
+res.forEach((market) => console.log(market.toFilteredJSONString(filter)));
+```
 
-- **sellCompleteSet**
+### filterMarketData
 
-- **reportOutcome**
+You can use this function to converts market object into string with filters.
+Populates `marketId` by default.
 
-- **dispute**
+```typescript
+const res = filterMarketData(market, filter);
+```
 
-- **redeemShares**
+[Code snippet](./filterMarketData.ts)
 
-- **approve**
+### getEndTimestamp
 
-- **reject**
+You can use this function to get timestamp at the end of the market period.
 
-- **cancelAdvised**
+```typescript
+const res = market.getEndTimestamp();
+```
+
+[Code snippet](./getEndTimestamp.ts)
+
+### getPoolId
+
+; not work
+You can use this function to get pool id to be used for fetching data using `sdk.models.market.getPool()`.
+Returns null if no swap pool is available for the market.
+
+```typescript
+const res = market.getPoolId();
+```
+
+[Code snippet](./getPoolId.ts)
+
+### getPool
+
+; not work
+You can use this function to converts market object into string with filters.
+
+```typescript
+const res = market.getPool();
+```
+
+[Code snippet](./getPool.ts)
+
+### getDisputes
+
+You can use this function to fetch disputes for this market using unique identifier `marketId`.
+
+```typescript
+const res = market.getDisputes();
+```
+
+[Code snippet](./getDisputes.ts)
+
+### deploySwapPool
+
+You can use this function to creates swap pool for this market via `api.tx.predictionMarkets.deploySwapPoolForMarket(marketId, weights)`.
+
+```typescript
+const res = await market.deploySwapPool(signer, wts, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| weights | string | List of lengths for each asset. |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./deploySwapPool.ts)
+
+### assetSpotPricesInZtg
+
+You can use this function to fetch spot prices of all assets in this market
+Can be used to find prices at a particular block using unique identifier.
+
+```typescript
+const res = market.assetSpotPricesInZtg(blockHash);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| blockHash | any | not necessarily. The unique identifier for the block to fetch asset spot prices. |
+
+[Code snippet](./assetSpotPricesInZtg.ts)
+
+### buyCompleteSet
+
+You can use this function to buy a complete set of outcome shares for the market.
+Note: This is the only way to create new shares.
+
+```typescript
+const res = market.buyCompleteSet(signer, Number(1000000000000));
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| amount | number | The amount of each share. |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./buyCompleteSet.ts)
+
+### sellCompleteSet
+
+You can use this function to sell/destroy a complete set of outcome shares for the market.
+
+```typescript
+const res = market.sellCompleteSet(signer, Number(1000000000000));
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| amount | number | The amount of each share. |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./sellCompleteSet.ts)
+
+### reportOutcome
+
+You can use this function to reports an outcome for the market.
+
+```typescript
+const res = await market.reportOutcome(signer, outcomeReport, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| outcome | OutcomeReport | The outcome of the market |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./reportOutcome.ts)
+
+### dispute
+
+You can use this function to submits a disputed outcome for the market.
+
+```typescript
+const res = await market.dispute(signer, outcomeReport, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| outcome | OutcomeReport | The outcome of the market |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./dispute.ts)
+
+### redeemShares
+
+You can use this function to redeems the winning shares for the market.
+
+```typescript
+const res = await market.redeemShares(signer, outcomeReport, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| outcome | OutcomeReport | The outcome of the market |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./redeemShares.ts)
+
+### approve
+
+You can use this function to approves the `Proposed` market that is waiting for approval from the advisory committee.
+
+```typescript
+const res = await market.approve(signer, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./approve.ts)
+
+### reject
+
+You can use this function to rejects the `Proposed` market that is waiting for approval from the advisory committee.
+
+```typescript
+const res = await market.reject(signer, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./reject.ts)
+
+### cancelAdvised
+
+You can use this function to allows the proposer of the market that is currently in a `Proposed` state to cancel the market proposal.
+
+```typescript
+const res = await market.cancelAdvised(signer, false);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| callbackOrPaymentInfo | | "true" to get txn fee estimation otherwise callback to capture transaction result. |
+
+[Code snippet](./cancelAdvised.ts)
