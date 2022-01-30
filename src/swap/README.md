@@ -1,8 +1,8 @@
-# Market
+# Swap
 
 ### toJSONString
 
-You can use this function to converts market object into string.
+You can use this function to convert market object into string.
 
 ```typescript
 const sdk = await SDK.initialize(endpoint);

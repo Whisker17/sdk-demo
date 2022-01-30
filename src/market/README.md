@@ -2,7 +2,7 @@
 
 ### toJSONString
 
-You can use this function to converts market object into string.
+You can use this function to convert market object into string.
 
 ```typescript
 const sdk = await SDK.initialize(endpoint);
@@ -14,7 +14,7 @@ res.forEach((market) => console.log(market.toJSONString()));
 
 ### toFilteredJSONString
 
-You can use this function to converts market object into string with filters.
+You can use this function to convert market object into string with filters.
 
 ```typescript
 const sdk = await SDK.initialize(endpoint);
@@ -26,7 +26,7 @@ res.forEach((market) => console.log(market.toFilteredJSONString(filter)));
 
 ### filterMarketData
 
-You can use this function to converts market object into string with filters.
+Populate only selected attributes from the market data defined using filter.
 Populates `marketId` by default.
 
 ```typescript
@@ -60,7 +60,7 @@ const res = market.getPoolId();
 ### getPool
 
 ; not work
-You can use this function to converts market object into string with filters.
+You can use this function to recreate swap pool for this market using data fetched with `poolId`.
 
 ```typescript
 const res = market.getPool();
@@ -80,7 +80,7 @@ const res = market.getDisputes();
 
 ### deploySwapPool
 
-You can use this function to creates swap pool for this market via `api.tx.predictionMarkets.deploySwapPoolForMarket(marketId, weights)`.
+You can use this function to create swap pool for this market via `api.tx.predictionMarkets.deploySwapPoolForMarket(marketId, weights)`.
 
 ```typescript
 const res = await market.deploySwapPool(signer, wts, false);
@@ -114,7 +114,7 @@ const res = market.assetSpotPricesInZtg(blockHash);
 ### buyCompleteSet
 
 You can use this function to buy a complete set of outcome shares for the market.
-Note: This is the only way to create new shares.
+**Note: This is the only way to create new shares.**
 
 ```typescript
 const res = market.buyCompleteSet(signer, Number(1000000000000));
@@ -148,7 +148,7 @@ const res = market.sellCompleteSet(signer, Number(1000000000000));
 
 ### reportOutcome
 
-You can use this function to reports an outcome for the market.
+You can use this function to report an outcome for the market.
 
 ```typescript
 const res = await market.reportOutcome(signer, outcomeReport, false);
@@ -165,7 +165,7 @@ const res = await market.reportOutcome(signer, outcomeReport, false);
 
 ### dispute
 
-You can use this function to submits a disputed outcome for the market.
+You can use this function to submit a disputed outcome for the market.
 
 ```typescript
 const res = await market.dispute(signer, outcomeReport, false);
@@ -182,7 +182,7 @@ const res = await market.dispute(signer, outcomeReport, false);
 
 ### redeemShares
 
-You can use this function to redeems the winning shares for the market.
+You can use this function to redeem the winning shares for the market.
 
 ```typescript
 const res = await market.redeemShares(signer, outcomeReport, false);
@@ -199,7 +199,7 @@ const res = await market.redeemShares(signer, outcomeReport, false);
 
 ### approve
 
-You can use this function to approves the `Proposed` market that is waiting for approval from the advisory committee.
+You can use this function to approve the `Proposed` market that is waiting for approval from the advisory committee.
 
 ```typescript
 const res = await market.approve(signer, false);
@@ -215,7 +215,7 @@ const res = await market.approve(signer, false);
 
 ### reject
 
-You can use this function to rejects the `Proposed` market that is waiting for approval from the advisory committee.
+You can use this function to reject the `Proposed` market that is waiting for approval from the advisory committee.
 
 ```typescript
 const res = await market.reject(signer, false);
@@ -231,7 +231,7 @@ const res = await market.reject(signer, false);
 
 ### cancelAdvised
 
-You can use this function to allows the proposer of the market that is currently in a `Proposed` state to cancel the market proposal.
+You can use this function to allow the proposer of the market that is currently in a `Proposed` state to cancel the market proposal.
 
 ```typescript
 const res = await market.cancelAdvised(signer, false);
