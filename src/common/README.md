@@ -2,7 +2,7 @@
 
 ### getBlockInfo
 
-You can use this function to get all market IDs in the Zeitgeiest.
+You can use this function to get block info in Zeitgeist.
 
 ```typescript
 const api = await ApiPromise.create({ provider });
@@ -16,7 +16,7 @@ const [blockNumber] = await Promise.all([
 
 ### getChainInfo
 
-You can use this function to get all market IDs in the Zeitgeiest.
+You can use this function to get chain info about Zeitgeiest.
 
 ```typescript
 const api = await ApiPromise.create({ provider });
