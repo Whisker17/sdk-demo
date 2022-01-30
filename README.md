@@ -4,10 +4,10 @@
 
 ## Common
 
-| Function Name                                    | Introduction                                                 |
-| ------------------------------------------------ | ------------------------------------------------------------ |
-| [getBlockInfo](./common/README.md/#getBlockInfo) | You can use this function to get block info in Zeitgeist.    |
-| [getChainInfo](./common/getChainInfo.ts)         | You can use this function to get chain info about Zeitgeiest. |
+| Function Name                            | Introduction                                                 |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| [getBlockInfo](./common#getBlockInfo)    | You can use this function to get block info in Zeitgeist.    |
+| [getChainInfo](./common/getChainInfo.ts) | You can use this function to get chain info about Zeitgeiest. |
 
 
 
