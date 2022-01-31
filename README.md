@@ -4,7 +4,7 @@
 
 ## Common
 
-| Function Name                                                | Introduction                     |
+| Function Name                                                | Description                      |
 | ------------------------------------------------------------ | -------------------------------- |
 | [getBlockInfo](https://github.com/Whisker17/sdk-demo/tree/main/src/common#getblockinfo) | get block info in Zeitgeist.     |
 | [getChainInfo](https://github.com/Whisker17/sdk-demo/tree/main/src/common#getChainInfo) | get chain info about Zeitgeiest. |
@@ -13,7 +13,7 @@
 
 ## Index
 
-| Function Name                                                | Introduction                                                 |
+| Function Name                                                | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [getAllMarketIds](https://github.com/Whisker17/sdk-demo/tree/main/src/Index#getAllMarketIds) | get all market IDs in the Zeitgeiest.                        |
 | [getAllMarkets](https://github.com/Whisker17/sdk-demo/tree/main/src/Index#getAllMarkets) | get all market in the Zeitgeiest.                            |
@@ -32,7 +32,7 @@
 
 ## Market
 
-| Function Name                                                | Introduction                                                 |
+| Function Name                                                | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [toJSONString](https://github.com/Whisker17/sdk-demo/tree/main/src/market#toJSONString) | convert market object into string.                           |
 | [toFilteredJSONString](https://github.com/Whisker17/sdk-demo/tree/main/src/market#toFilteredJSONString) | convert market object into string with filters.              |
@@ -54,7 +54,7 @@
 
 ## Swap
 
-| Function Name                                                | Introduction                                                 |
+| Function Name                                                | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [toJSONString](https://github.com/Whisker17/sdk-demo/tree/main/src/swap#toJSONString) | convert market object into string.                           |
 | [getSpotPrice](https://github.com/Whisker17/sdk-demo/tree/main/src/swap#getSpotPrice) | get spot price in the specified block.                       |
