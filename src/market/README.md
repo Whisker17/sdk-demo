@@ -46,8 +46,6 @@ const res = market.getEndTimestamp();
 [Code snippet](./getEndTimestamp.ts)
 
 ### getPoolId
-
-; not work
 You can use this function to get pool id to be used for fetching data using `sdk.models.market.getPool()`.
 Returns null if no swap pool is available for the market.
 
@@ -58,8 +56,6 @@ const res = market.getPoolId();
 [Code snippet](./getPoolId.ts)
 
 ### getPool
-
-; not work
 You can use this function to recreate swap pool for this market using data fetched with `poolId`.
 
 ```typescript

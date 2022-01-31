@@ -26,8 +26,6 @@ const res = await sdk.models.getAllMarketIds();
 
 ### createCategoricalMarket
 
-; not work
-
 You can use this function to create a categorical market in the Zeitgeiest.
 
 ```typescript
@@ -60,8 +58,6 @@ const marketId = await sdk.models.createCategoricalMarket(
 [Code snippet](./createCategoricalMarket.ts)
 
 ### createScalarMarket
-
-; not work
 
 You can use this function to create a scalar market in the Zeitgeiest.
 
@@ -162,8 +158,6 @@ if (swap != null) {
 
 ### assetSpotPricesInZtg
 
-; not work
-
 You can use this function to find prices at a particular block in the Zeitgeiest.
 
 ```typescript
@@ -188,8 +182,6 @@ const res = await sdk.models.getBlockData();
 
 ### indexTransferRecipients
 
-; not work
-
 You can use this function to get all market IDs in the Zeitgeiest.
 
 ```typescript
@@ -201,8 +193,6 @@ const res = await sdk.models.getAllMarketIds();
 [Code snippet](./getAllMarketIds.ts)
 
 ### currencyTransfer
-
-; not work
 
 You can use this function to transfer specified asset from self to any account in the Zeitgeiest.
 
