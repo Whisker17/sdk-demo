@@ -6,6 +6,6 @@
   "author": "Whisker17 <yukaijun123456@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@zeitgeistpm/sdk": "^0.3.10"
+    "@zeitgeistpm/sdk": "^0.4.2"
   }
 }
