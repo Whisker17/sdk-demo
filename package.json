@@ -6,6 +6,10 @@
   "author": "Whisker17 <yukaijun123456@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@zeitgeistpm/sdk": "^0.4.2"
+    "@zeitgeistpm/sdk": "^0.4.4"
+  },
+  "scripts": {
+    "clean": "rm -rf src/**/dist",
+    "compile": "tsc --build --force tsconfig.json"
   }
 }

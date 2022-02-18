@@ -19,7 +19,7 @@ async function main() {
   const outcomeReport = market.marketType.isCategorical
     ? { categorical: Number(outcome) }
     : { scalar: Number(outcome) };
-  const res = await market.redeemShares(signer, outcomeReport, false);
+  const res = await market.redeemShares(signer, false);
 
   console.log(res);
 }

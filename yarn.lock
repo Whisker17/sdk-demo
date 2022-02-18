@@ -427,7 +427,7 @@
   dependencies:
     "@types/node" "*"
 
-"@zeitgeistpm/sdk@^0.4.2":
+"@zeitgeistpm/sdk@^0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.4.tgz#f0105fc4a4caf9788efa860cafbb05d2be7597d5"
   integrity sha512-maGS/K820sEvmNryzYdzvOgseRwXue9Rfe3KNMy0S0AVSj7KcTGHgvdUqIWa4eShJSyWcSw3E4Plde+eMjwhLA==

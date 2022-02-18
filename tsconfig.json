@@ -1,0 +1,23 @@
+{
+  "references": [
+    {
+      "path": "./src/index"
+    },
+    {
+      "path": "./src/common"
+    },
+    {
+      "path": "./src/market"
+    },
+    {
+      "path": "./src/swap"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true
+  },
+  "files": [],
+  "include": [".eslintrc.js"],
+  "exclude": ["node_modules", "**/node_modules"]
+}
