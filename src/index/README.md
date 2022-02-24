@@ -24,6 +24,47 @@ const res = await sdk.models.getAllMarketIds();
 
 [Code snippet](./getAllMarkets.ts)
 
+### createCpmmMarketAndDeployAssets
+
+Create a market using CPMM scoring rule, buy a complete set of the assets used and deploy within and deploy an arbitrary amount of those that's greater than the minimum amount.
+
+```typescript
+const sdk = await SDK.initialize(endpoint);
+
+const poolId = await sdk.models.createCpmmMarketAndDeployAssets(
+  signer,
+  oracle,
+  marketPeriod,
+  advised ? "Advised" : "Permissionless",
+  marketType,
+  mdm,
+  amts,
+  baseAssetAmount,
+  wts,
+  kp,
+  metadata,
+  false
+);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
+| oracle | string |The address that will be responsible for reporting the market. |
+| period | MarketPeriod |Start and end block numbers or unix timestamp of the market. |
+| creationType | string |"Permissionless" or "Advised", Advised as default |
+| marketType | string |"Categorical" or "Scalar" |
+| mdm | MarketDisputeMechanism |Dispute settlement can be authorized, court or simple_disputes |
+| keep | string[] |Specifies how many assets to keep. |
+| weights | string[] |List of relative denormalized weights of each asset price. |
+| baseAssetAmount | Amount for native currency liquidity |
+| amounts | string[] | List of amounts of each outcome asset that should be deployed.|
+| metadata | DecodedMarketMetadata |Market metadata |
+| paymentInfo | |"true" to get txn fee estimation otherwise "false" |
+
+[Code snippet](./createCpmmMarketAndDeployAssets.ts)
+
 ### createCategoricalMarket
 
 You can use this function to create a categorical market in the Zeitgeiest.
@@ -180,6 +221,68 @@ const res = await sdk.models.getBlockData();
 
 [Code snippet](./getBlockData.ts)
 
+### queryMarket
+
+You can use this function to query market by GraphQL in the Zeitgeiest.
+
+```typescript
+const sdk = await SDK.initialize(endpoint, { graphQlEndpoint });
+
+const res = await sdk.models.queryMarket(marketId);
+```
+
+[Code snippet](./queryMarket.ts)
+
+### queryMarketsCount
+
+You can use this function to query counts of markets for specified filter options by GraphQL in the Zeitgeiest.
+
+```typescript
+const sdk = await SDK.initialize(endpoint, { graphQlEndpoint });
+
+const count = await sdk.models.queryMarketsCount({ tags: [tag] });
+```
+
+[Code snippet](./queryMarketsCount.ts)
+
+### queryAllActiveAssets
+
+You can use this function to query all active assets from subsquid indexer in the Zeitgeiest.
+
+```typescript
+const sdk = await SDK.initialize(endpoint, { graphQlEndpoint });
+
+const res = await sdk.models.queryAllActiveAssets(marketSlug, pagination);
+```
+
+**Arguments**
+| Name | Type | Introduction |
+| ---- | ---- | ------------ |
+| marketSlugText | string | Filter assets by market slug |
+| pagination | { pageNumber: number; pageSize: number } | Options for pagination, not neccessary |
+
+[Code snippet](./queryAllActiveAssets.ts)
+
+### filterMarkets
+
+You can use this function to query subsquid indexer for market data with pagination in the Zeitgeiest.
+
+```typescript
+const sdk = await SDK.initialize(endpoint, { graphQlEndpoint });
+
+const { result, count } = await sdk.models.filterMarkets(
+  { statuses, creator, oracle, tags, searchText, liquidityOnly },
+  {
+    ordering,
+    orderBy,
+    pageSize,
+    pageNumber,
+  }
+);
+```
+
+[Code snippet](./filterMarkets.ts)
+
 ### indexTransferRecipients
 
 You can use this function to get all market IDs in the Zeitgeiest.
@@ -200,12 +303,12 @@ You can use this function to transfer specified asset from self to any account i
 const sdk = await SDK.initialize(endpoint);
 
 const res = await sdk.models.currencyTransfer(
-    signer,
-    dest,
-    currencyId,
-    amount,
-    false
-  );
+  signer,
+  dest,
+  currencyId,
+  amount,
+  false
+);
 ```
 
 [Code snippet](./currencyTransfer.ts)

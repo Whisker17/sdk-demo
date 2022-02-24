@@ -427,36 +427,37 @@
   dependencies:
     "@types/node" "*"
 
-"@zeitgeistpm/sdk@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.4.tgz#f0105fc4a4caf9788efa860cafbb05d2be7597d5"
-  integrity sha512-maGS/K820sEvmNryzYdzvOgseRwXue9Rfe3KNMy0S0AVSj7KcTGHgvdUqIWa4eShJSyWcSw3E4Plde+eMjwhLA==
+"@zeitgeistpm/sdk@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.14.tgz#08e2bdfb3dffcb2438ae592937c6a3831e0af776"
+  integrity sha512-Gv9YLatIy/yvoZsRZ+8hJ9D0KkY5Ay75hIVObo6tvd3H88Myb/pxfmMyCwEaGnDtrEMXAW7D1gdoJwNSyS0z6A==
   dependencies:
     "@polkadot/api" "^7.5.1"
     "@polkadot/keyring" "^8.3.3"
     "@polkadot/util" "^8.3.3"
     "@polkadot/util-crypto" "^8.3.3"
-    "@zeitgeistpm/type-defs" "^0.4.0"
-    "@zeitgeistpm/types" "^0.4.0"
+    "@zeitgeistpm/type-defs" "^0.4.14"
+    "@zeitgeistpm/types" "^0.4.14"
     commander "^7.2.0"
+    decimal.js "^10.3.1"
     graphql "15.x"
     graphql-request "^3.6.1"
     ipfs-http-client "^49.0.4"
     it-all "^1.0.4"
     uint8arrays "^2.1.4"
 
-"@zeitgeistpm/type-defs@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/type-defs/-/type-defs-0.4.0.tgz#809526c7e9ffcdb22d19249fe4db5a5d9ae65aca"
-  integrity sha512-so/WK+Zi5pxGKy08ux7VTkGrUNKN+a97fD8SGEliAAIvmB0NO4u0Gvya+MmtYd/6r7p7OXS+Em1I9rzYr/V8Rw==
+"@zeitgeistpm/type-defs@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/type-defs/-/type-defs-0.4.14.tgz#b866e96c4cdd3e817d7afb19cd71b5e40bc3e8bd"
+  integrity sha512-FBv114WGbWjQLOHo2QBSVn0Tjcwh3ZHCY26llrBOb+RfyYXYp8iseaEORr62oUArIWK/m01Xivu+g9nBNnZyRg==
 
-"@zeitgeistpm/types@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/types/-/types-0.4.0.tgz#31707888de07caadb5a41528868354543a241df6"
-  integrity sha512-K13zbn0o2N+KvvDj2hAChuFOZY8J9ycFEtE5JXx4X5xY9gql+B1+0dnqLDjnbUUzbiztZA1dArINaZI3N6eX/Q==
+"@zeitgeistpm/types@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/types/-/types-0.4.14.tgz#02accf369b0d5bf9819a54169f15c2db4e406171"
+  integrity sha512-QOh9FvYN7XhsQ3n8DRb81GS/sMqLK1Bi6WOduyZHt6KZWuYrPhIhFqB9XlHCF1gCmSjQYGxeXbMOOiRPCg49IQ==
   dependencies:
     "@polkadot/types" "^7.5.1"
-    "@zeitgeistpm/type-defs" "^0.4.0"
+    "@zeitgeistpm/type-defs" "^0.4.14"
     axios "^0.21.1"
 
 "@zxing/text-encoding@0.9.0":
@@ -686,6 +687,11 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
   dependencies:
     ms "2.1.2"
+
+decimal.js@^10.3.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.3.1.tgz#d8c3a444a9c6774ba60ca6ad7261c3a94fd5e783"
+  integrity sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==
 
 define-properties@^1.1.3:
   version "1.1.3"
