@@ -38,14 +38,23 @@ async function main() {
   const period = "1000000";
   const marketPeriod = { block: period.split(" ").map((x) => +x) };
   const mdm = { Authorized: 1 };
+  const baseAssetAmount = "1000000";
+  const amts = ["1000000"];
+  const wts = ["1000000"];
+  const kp = ["1000000"];
+  const marketType = { Categorical: metadata.categories.length };
 
-  const marketId = await sdk.models.createCategoricalMarket(
+  const marketId = await sdk.models.createCpmmMarketAndDeployAssets(
     signer,
     oracle,
     marketPeriod,
     advised,
+    marketType,
     mdm,
-    cpmm,
+    amts,
+    baseAssetAmount,
+    wts,
+    kp,
     metadata,
     false
   );

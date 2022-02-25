@@ -6,7 +6,7 @@
   "author": "Whisker17 <yukaijun123456@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@zeitgeistpm/sdk": "^0.4.5"
+    "@zeitgeistpm/sdk": "^0.4.6"
   },
   "scripts": {
     "clean": "rm -rf src/**/dist",

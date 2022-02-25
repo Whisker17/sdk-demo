@@ -427,10 +427,10 @@
   dependencies:
     "@types/node" "*"
 
-"@zeitgeistpm/sdk@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.5.tgz#33bb574cc54f8c9204179c27921a83b8134789b2"
-  integrity sha512-nn4fmFBExGtQ7LxMSOg0w/bX2DBBUagApJzhgbZfdNSjexpeijJWhp9acd/m3i8Nv1GI2GJxSaf7Z9AoaD4bTA==
+"@zeitgeistpm/sdk@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.6.tgz#3e8c565942b64a3888b7b13b48f306c402e49f00"
+  integrity sha512-ZrMUyOp8+q3V9Wpk+A1rMOQbIAiFg+l2dIqevudT8bkh9t5cJ//X6LVIyyVNlPJfg5LHXPEdTrMRlZ2Ax5385Q==
   dependencies:
     "@polkadot/api" "^7.5.1"
     "@polkadot/keyring" "^8.3.3"
