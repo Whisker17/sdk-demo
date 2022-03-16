@@ -427,10 +427,10 @@
   dependencies:
     "@types/node" "*"
 
-"@zeitgeistpm/sdk@^0.4.6":
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.6.tgz#3e8c565942b64a3888b7b13b48f306c402e49f00"
-  integrity sha512-ZrMUyOp8+q3V9Wpk+A1rMOQbIAiFg+l2dIqevudT8bkh9t5cJ//X6LVIyyVNlPJfg5LHXPEdTrMRlZ2Ax5385Q==
+"@zeitgeistpm/sdk@^0.4.8-alpha.3":
+  version "0.4.8-alpha.3"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.8-alpha.3.tgz#289309d67d6b466d19c85ead88f2f7d903faa2c8"
+  integrity sha512-KtY76xtEJGiEOs3phRqMowJ1I3meKp1tLTZNnoijx5LlbHPe6CyeXbqMhvMKDaFeT8q9gMlcgS/u7cZxf1RPyA==
   dependencies:
     "@polkadot/api" "^7.5.1"
     "@polkadot/keyring" "^8.3.3"
@@ -439,6 +439,7 @@
     "@zeitgeistpm/type-defs" "^0.4.5"
     "@zeitgeistpm/types" "^0.4.5"
     commander "^7.2.0"
+    decimal.js "^10.3.1"
     graphql "15.x"
     graphql-request "^3.6.1"
     ipfs-http-client "^49.0.4"
@@ -686,6 +687,11 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
   dependencies:
     ms "2.1.2"
+
+decimal.js@^10.3.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.3.1.tgz#d8c3a444a9c6774ba60ca6ad7261c3a94fd5e783"
+  integrity sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==
 
 define-properties@^1.1.3:
   version "1.1.3"

@@ -28,6 +28,9 @@
 | [filterMarkets](https://github.com/Whisker17/sdk-demo/tree/main/src/index#filtermarkets)                                     | get all market in the Zeitgeiest.                                                                                                                                                |
 | [indexTransferRecipients](https://github.com/Whisker17/sdk-demo/tree/main/src/index#indextransferrecipients)                 | query subsquid indexer for market data with pagination in the Zeitgeiest.                                                                                                        |
 | [currencyTransfer](https://github.com/Whisker17/sdk-demo/tree/main/src/index#currencytransfer)                               | transfer specified asset from self to any account in the Zeitgeiest.                                                                                                             |
+| [getAccountBalances](https://github.com/Whisker17/sdk-demo/tree/main/src/index#getAccountBalances)                           | get balance of specific account.                                                                                                                                                 |
+| [getMarketDataForPoolsList](https://github.com/Whisker17/sdk-demo/tree/main/src/index#getMarketDataForPoolsList)             | get market datas by using pool's data                                                                                                                                            |
+| [filterPools](https://github.com/Whisker17/sdk-demo/tree/main/src/index#filterPools)                                         | filter some pools from Zeitgeist                                                                                                                                                 |
 
 ## Market
 

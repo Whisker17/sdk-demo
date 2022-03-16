@@ -8,15 +8,8 @@ async function main() {
   const graphQlEndpoint = "https://processor.zeitgeist.pm/graphql";
 
   const sdk = await SDK.initialize(ZTGNET, { graphQlEndpoint });
-  const marketId: number = 1;
-
-  // get market slug
-  const slug = (await sdk.models.fetchMarketData(marketId)).slug;
-
-  let pagination: { pageSize: number; pageNumber: number };
-  const pageSize = 1;
-  const pageNumber = 1;
-  const res = await sdk.models.queryAllActiveAssets(slug, pagination);
+  const addrs = ["dE24zvxMRa46j6iv2YAYbnYF5MTeZrQUnSGffZ9rCVuNCDDDy"];
+  const res = await sdk.models.getAccountBalances(addrs);
   console.log(res);
 }
 
