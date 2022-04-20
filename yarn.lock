@@ -427,17 +427,17 @@
   dependencies:
     "@types/node" "*"
 
-"@zeitgeistpm/sdk@^0.4.8-alpha.3":
-  version "0.4.8-alpha.3"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.8-alpha.3.tgz#289309d67d6b466d19c85ead88f2f7d903faa2c8"
-  integrity sha512-KtY76xtEJGiEOs3phRqMowJ1I3meKp1tLTZNnoijx5LlbHPe6CyeXbqMhvMKDaFeT8q9gMlcgS/u7cZxf1RPyA==
+"@zeitgeistpm/sdk@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/sdk/-/sdk-0.4.14.tgz#08e2bdfb3dffcb2438ae592937c6a3831e0af776"
+  integrity sha512-Gv9YLatIy/yvoZsRZ+8hJ9D0KkY5Ay75hIVObo6tvd3H88Myb/pxfmMyCwEaGnDtrEMXAW7D1gdoJwNSyS0z6A==
   dependencies:
     "@polkadot/api" "^7.5.1"
     "@polkadot/keyring" "^8.3.3"
     "@polkadot/util" "^8.3.3"
     "@polkadot/util-crypto" "^8.3.3"
-    "@zeitgeistpm/type-defs" "^0.4.5"
-    "@zeitgeistpm/types" "^0.4.5"
+    "@zeitgeistpm/type-defs" "^0.4.14"
+    "@zeitgeistpm/types" "^0.4.14"
     commander "^7.2.0"
     decimal.js "^10.3.1"
     graphql "15.x"
@@ -446,18 +446,18 @@
     it-all "^1.0.4"
     uint8arrays "^2.1.4"
 
-"@zeitgeistpm/type-defs@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/type-defs/-/type-defs-0.4.5.tgz#e64a5797189af521394ae6664f14da535868aac1"
-  integrity sha512-tmF9EWO3Rw8Oxd5Q92VzezMV2ZlP9sJqxCfBw/yVwtZPsViKwf0s7rb5pVm5+iAY6gOMgtrMFQ8Ttpavd6fd5w==
+"@zeitgeistpm/type-defs@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/type-defs/-/type-defs-0.4.14.tgz#b866e96c4cdd3e817d7afb19cd71b5e40bc3e8bd"
+  integrity sha512-FBv114WGbWjQLOHo2QBSVn0Tjcwh3ZHCY26llrBOb+RfyYXYp8iseaEORr62oUArIWK/m01Xivu+g9nBNnZyRg==
 
-"@zeitgeistpm/types@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@zeitgeistpm/types/-/types-0.4.5.tgz#b0965e1d94a4b841593e575e13f5fd9faa1e5e2f"
-  integrity sha512-0+AyUZtvCqly0Mp9xlaDUEFb5F1YccfBgZhFZtW5jbFvX9PsAH2//jRrrhxEBsYGaPZojHdmt0b/jr1oVLTC7A==
+"@zeitgeistpm/types@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@zeitgeistpm/types/-/types-0.4.14.tgz#02accf369b0d5bf9819a54169f15c2db4e406171"
+  integrity sha512-QOh9FvYN7XhsQ3n8DRb81GS/sMqLK1Bi6WOduyZHt6KZWuYrPhIhFqB9XlHCF1gCmSjQYGxeXbMOOiRPCg49IQ==
   dependencies:
     "@polkadot/types" "^7.5.1"
-    "@zeitgeistpm/type-defs" "^0.4.5"
+    "@zeitgeistpm/type-defs" "^0.4.14"
     axios "^0.21.1"
 
 "@zxing/text-encoding@0.9.0":

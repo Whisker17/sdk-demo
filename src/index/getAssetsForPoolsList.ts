@@ -11,9 +11,9 @@ async function main() {
 
   // get pools
   const pools = await sdk.models.filterPools();
-  console.log(pools);
+  console.log(pools.toLocaleString);
 
-  const res = await sdk.models.getMarketDataForPoolsList(pools);
+  const res = await sdk.models.getAssetsForPoolsList(pools);
   console.log(res);
 }
 

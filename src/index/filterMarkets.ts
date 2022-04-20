@@ -1,4 +1,5 @@
 import SDK from "@zeitgeistpm/sdk";
+import { MarketStatusText } from "@zeitgeistpm/sdk/dist/types";
 
 async function main() {
   // Initialise the provider to connect to the local node
@@ -9,7 +10,8 @@ async function main() {
 
   const sdk = await SDK.initialize(ZTGNET, { graphQlEndpoint });
 
-  const statuses = [];
+  const active: MarketStatusText = "Active";
+  const statuses = [active];
   const creator = "";
   const oracle = "";
   const tags = ["Crypto"];

@@ -9,11 +9,17 @@ async function main() {
 
   const sdk = await SDK.initialize(ZTGNET, { graphQlEndpoint });
 
-  // get pools
-  const pools = await sdk.models.filterPools();
-  console.log(pools);
+  const marketId = 1;
+  const assetIdContains = 1;
+  const timestamp = "2016-01-01T13:10:20Z";
 
-  const res = await sdk.models.getMarketDataForPoolsList(pools);
+  // Todo
+  // Where can I get timestamp?
+  const res = await sdk.models.getAssetPriceHistory(
+    marketId,
+    assetIdContains,
+    timestamp
+  );
   console.log(res);
 }
 
