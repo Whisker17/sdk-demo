@@ -1,4 +1,5 @@
 import SDK, { util } from "@zeitgeistpm/sdk";
+import { DecodedMarketMetadata } from "@zeitgeistpm/sdk/dist/types";
 
 async function main() {
   // Initialise the provider to connect to the local node
@@ -14,9 +15,15 @@ async function main() {
 
   // Construct Market metadata
   const description = "description for test";
-  const title = "test";
+  const slug = "test";
   const question = "Will this test work?";
-  const bounds = [0,100];
+  const bounds = [0, 100];
+
+  const metadata: DecodedMarketMetadata = {
+    slug,
+    description,
+    question,
+  };
 
   const oracle = "5CS2Q1XbRR1eYnxeXUm8fqq6PfK3WLfwUvCpNvGsYAjKtsUC";
   const advised = "Advised";
@@ -27,14 +34,13 @@ async function main() {
 
   const marketId = await sdk.models.createScalarMarket(
     signer,
-    title,
-    description,
     oracle,
     marketPeriod,
     advised,
-    bounds,
     mdm,
     cpmm,
+    metadata,
+    bounds,
     false
   );
   console.log(`Categorical market created! Market Id: ${marketId}`);

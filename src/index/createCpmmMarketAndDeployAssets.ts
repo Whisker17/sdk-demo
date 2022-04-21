@@ -33,7 +33,6 @@ async function main() {
   };
 
   const oracle = "5CS2Q1XbRR1eYnxeXUm8fqq6PfK3WLfwUvCpNvGsYAjKtsUC";
-  const advised = "Advised";
   const cpmm = "CPMM";
   const period = "1000000";
   const marketPeriod = { block: period.split(" ").map((x) => +x) };
@@ -41,20 +40,17 @@ async function main() {
   const baseAssetAmount = "1000000";
   const amts = ["1000000"];
   const wts = ["1000000"];
-  const kp = ["1000000"];
   const marketType = { Categorical: metadata.categories.length };
 
   const marketId = await sdk.models.createCpmmMarketAndDeployAssets(
     signer,
     oracle,
     marketPeriod,
-    advised,
     marketType,
     mdm,
     amts,
     baseAssetAmount,
     wts,
-    kp,
     metadata,
     false
   );
