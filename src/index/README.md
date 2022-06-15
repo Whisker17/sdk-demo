@@ -49,19 +49,16 @@ const poolId = await sdk.models.createCpmmMarketAndDeployAssets(
 
 **Arguments**
 | Name | Type | Introduction |
-| ---- | ---- | ------------ |
+| --------------------- | ---------------------- | ------------------------------------------------------------ |
 | signer | KeyringPairOrExtSigner | The actual signer provider to sign the transaction. |
-| oracle | string |The address that will be responsible for reporting the market. |
-| period | MarketPeriod |Start and end block numbers or unix timestamp of the market. |
-| creationType | string |"Permissionless" or "Advised", Advised as default |
-| marketType | string |"Categorical" or "Scalar" |
-| mdm | MarketDisputeMechanism |Dispute settlement can be authorized, court or simple_disputes |
-| keep | string[] |Specifies how many assets to keep. |
-| weights | string[] |List of relative denormalized weights of each asset price. |
-| baseAssetAmount | Amount for native currency liquidity |
-| amounts | string[] | List of amounts of each outcome asset that should be deployed.|
-| metadata | DecodedMarketMetadata |Market metadata |
-| paymentInfo | |"true" to get txn fee estimation otherwise "false" |
+| oracle | string | The address that will be responsible for reporting the market. |
+| period | MarketPeriod | Start and end block numbers or unix timestamp of the |
+| marketType | string | "Categorical" or "Scalar" |
+| mdm | MarketDisputeMechanism | Dispute settlement can be authorized, court or simple_disputes |
+| amount | string | The amount of each token to add to the pool. |
+| weights | string[] | List of relative denormalized weights of each asset price. |
+| metadata | DecodedMarketMetadata | A hash pointer to the metadata of the market. |
+| callbackOrPaymentInfo | | `true` to get txn fee estimation otherwise `false` |
 
 [Code snippet](./createCpmmMarketAndDeployAssets.ts)
 
