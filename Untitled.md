@@ -1,4 +1,0 @@
-# Subscan API
-
-## General API
-
