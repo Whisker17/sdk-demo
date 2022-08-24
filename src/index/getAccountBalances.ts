@@ -5,7 +5,7 @@ async function main() {
   // wss://bsr.zeitgeist.pm
   // wss://bp-rpc.zeitgeist.pm
   const ZTGNET = "wss://bsr.zeitgeist.pm";
-  const graphQlEndpoint = "https://processor.zeitgeist.pm/graphql";
+  const graphQlEndpoint = "https://processor.bsr.zeitgeist.pm/graphql";
 
   const sdk = await SDK.initialize(ZTGNET, { graphQlEndpoint });
   const addrs = ["dE24zvxMRa46j6iv2YAYbnYF5MTeZrQUnSGffZ9rCVuNCDDDy"];
