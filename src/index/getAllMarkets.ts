@@ -7,10 +7,9 @@ async function main() {
   const ZTGNET = "wss://bsr.zeitgeist.pm";
 
   const sdk = await SDK.initialize(ZTGNET, { logEndpointInitTime: false });
-  const marketId: number = 1;
 
   const res = await sdk.models.getAllMarkets();
-  
+
   res.forEach((market) => console.log(market.toJSONString()));
 }
 
